@@ -6,7 +6,7 @@ from django.contrib.auth.models import Group
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
-        fields = UserCreationForm.Meta.fields + ('email')
+        fields = UserCreationForm.Meta.fields + ('email',)
 
 class UserRegistrationView(CreateView):
     form_class = CustomUserCreationForm
